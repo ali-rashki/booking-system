@@ -1,10 +1,11 @@
 from pathlib import Path
 import sys
+from datetime import timedelta
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # اضافه کردن مسیر apps به sys.path
-sys.path.insert(0, str(BASE_DIR / 'apps'))
+# sys.path.insert(0, str(BASE_DIR / 'apps'))
 
 SECRET_KEY = 'django-insecure-6uhqd#bul!5^-t^llzai-y#jymggdlx6@(fs9b8k(&a8_o!5d7'
 
@@ -19,10 +20,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'drf_spectacular',
 
-    # Local apps - بدون apps.
-    'users',
-    'courses',
+    # Local apps :
+    'apps.users',
+    'apps.courses',
 ]
 
 MIDDLEWARE = [
@@ -76,6 +79,25 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+}
+
 AUTH_USER_MODEL = 'users.User'
 
 LANGUAGE_CODE = 'en-us'
@@ -87,3 +109,11 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'سیستم رزرو کلاس API',
+    'DESCRIPTION': 'API برای مدیریت دوره‌ها، جلسات و ثبت‌نام دانشجویان',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'COMPONENT_SPLIT_REQUEST': True,
+}
