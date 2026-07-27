@@ -4,7 +4,7 @@
 ![Course Booking System](https://img.shields.io/badge/Course%20Booking%20System-v1.0-blue)
 =======
 **Course Booking System v1.0**
->>>>>>> cc49da4a34d89ea598372c88a5b2614a263c4042
+>>>>>>> 
 
 یک API کامل برای مدیریت دوره‌های آموزشی، ثبت‌نام دانشجوها در کلاس‌ها و مدیریت ظرفیت، ساخته شده با **Django** و **Django
 REST Framework**.
@@ -37,7 +37,7 @@ REST Framework**.
 ## 🛠️ تکنولوژی‌ها
 
 `Django 6.0` `Django REST Framework` `Simple JWT` `PostgreSQL` `Docker & Compose` `Nginx + Gunicorn` `drf-spectacular`
->>>>>>> cc49da4a34d89ea598372c88a5b2614a263c4042
+>>>>>>> 
 
 ## 📁 ساختار پروژه
 
@@ -74,7 +74,7 @@ booking-system/
 git clone https://github.com/ali-rashki/booking-system.git
 =======
 git clone https://github.com/AliRashki/booking-system.git
->>>>>>> cc49da4a34d89ea598372c88a5b2614a263c4042
+>>>>>>> 
 cd booking-system
 
 # ۲. ساخت محیط مجازی
@@ -101,7 +101,7 @@ DB_PORT=5432
 
 # ۵. اجرای مایگریشن‌ها
 python manage.py migrate
->>>>>>> cc49da4a34d89ea598372c88a5b2614a263c4042
+>>>>>>> 
 python manage.py createsuperuser
 
 # ۶. اجرا
@@ -116,7 +116,7 @@ http://127.0.0.1:8000
 ```
 =======
 `http://127.0.0.1:8000`
->>>>>>> cc49da4a34d89ea598372c88a5b2614a263c4042
+>>>>>>
 
 ## 🐳 اجرا با Docker
 
@@ -137,7 +137,7 @@ docker-compose up --build
 ```http
 =======
 ```
->>>>>>> cc49da4a34d89ea598372c88a5b2614a263c4042
+>>>>>>> 
 POST /api/token/
 {
     "username": "your_username",
@@ -165,7 +165,7 @@ Authorization: Bearer <your_access_token>
 | متد      | مسیر                     | توضیح                        |
 =======
 | Method   | Endpoint                 | توضیح                        |
->>>>>>> cc49da4a34d89ea598372c88a5b2614a263c4042
+>>>>>>> 
 |----------|--------------------------|------------------------------|
 | `POST`   | `/api/token/`            | دریافت توکن                  |
 | `POST`   | `/api/token/refresh/`    | تمدید توکن                   |
@@ -187,7 +187,7 @@ Authorization: Bearer <your_access_token>
 pytest
 =======
 python manage.py test
->>>>>>> cc49da4a34d89ea598372c88a5b2614a263c4042
+>>>>>>> 
 ```
 
 ## 🤝 مشارکت
@@ -212,10 +212,3 @@ python manage.py test
 
 </div>
 =======
-- **گیت‌هاب:** [AliRashki](https://github.com/AliRashki)
-- **ایمیل:** kenway755@gmail.com
-
----
-
-ساخته شده با ❤️ و جنگو
->>>>>>> cc49da4a34d89ea598372c88a5b2614a263c4042
