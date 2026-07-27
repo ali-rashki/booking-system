@@ -51,7 +51,7 @@ booking-system/
 │   └── settings/   # تنظیمات
 =======
 │   └── settings/   # تنظیمات (base, dev, production)
->>>>>>> cc49da4a34d89ea598372c88a5b2614a263c4042
+>>>>>>> 
 ├── static/
 ├── media/
 ├── docker-compose.yml
@@ -63,7 +63,7 @@ booking-system/
 └── README.md
 =======
 └── requirements.txt
->>>>>>> cc49da4a34d89ea598372c88a5b2614a263c4042
+>>>>>>> 
 ```
 
 ## ⚡ نصب و اجرا
